@@ -1,56 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Professor Rodrigo</title>
-  <script src="https://kit.fontawesome.com/859a3aea5c.js" crossorigin="anonymous"></script>
-</head>
-<body>
-  <header>
-    <div>
-      <img src="assets/logo_rodrigo.png" alt="Logo Professor Rodrigo, um P e um R mesclados" width="80px">
-    </div>
-    
-    <ul>
-      <li>
-        <img src="assets/insta_logo.svg" alt="logo instagram" width="45px"><a target="_blank" href="https://www.instagram.com/rodrigos_95/">instagram</a>
-      </li>
-      <li>
-        <img src="assets/linkedin_logo.svg" alt="logo instagram" width="45px"><a target="_blank" href="https://www.linkedin.com/in/ros95/">LinkedIn</a>
-      </li>
-      <li>
-       <img src="assets/lattes_logo.png" alt="logo lattes" width="30px"><a target="_blank" href="http://lattes.cnpq.br/3834696248471339">Lattes</a>
-      </li>
-    </ul>
-  </header>
-  <main>
-    <section class="container">
-      <div class="name">
-        <h1>Rodrigo Oliveira</h1>
-        <h5>Professor de Matemática</h5>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Belgrano&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Professor Rodrigo</title>
+    <script
+      src="https://kit.fontawesome.com/859a3aea5c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <img
+          src="assets/logo_rodrigo.png"
+          alt="Logo Professor Rodrigo, um P e um R mesclados"
+          width="80px"
+        />
       </div>
-      <div id="arrow">
-        <i class="fa-solid fa-circle-arrow-down"></i>
-      </div>
-
-      <div id="about">
-        <p>
-          Professor particular de Matemática Anos Finais e Ensino Médio
-        </p>
-      </div>
+      <ul>
+        <li>
+          <i class="fa-brands fa-instagram"></i
+          ><a target="_blank" href="https://www.instagram.com/rodrigos_95/">
+            instagram</a
+          >
+        </li>
+        <li>
+          <i class="fa-brands fa-linkedin"> </i>
+          <a target="_blank" href="https://www.linkedin.com/in/ros95/"
+            >LinkedIn</a
+          >
+        </li>
+        <li>
+          <i class="fa-solid fa-location-dot"> </i>
+          <a target="_blank" href="http://lattes.cnpq.br/3834696248471339"
+            >Lattes</a
+          >
+        </li>
+        <li>
+          <i class="fa-brands fa-whatsapp"> </i>
+          <a target="_blank" href="http://wa.me/5561995876284">Whatsapp</a>
+        </li>
+      </ul>
+    </header>
+    <main>
+      <section class="container">
+        <div class="name">
+          <h1>Rodrigo Oliveira</h1>
+          <h5>Professor de Matemática</h5>
+        </div>
+        <div onclick="displayAbout()" id="arrow">
+          <i id="animation" class="fa-solid fa-circle-arrow-down fa-3x"></i>
+        </div>
+        <div style="display: none" id="about">
+          <p>Professor particular de Matemática Anos Finais e Ensino Médio</p>
+        </div>
+      </section>
+    </main>
+    <footer>
       <div class="form">
         <div>
           <p>Deixe seu contato!</p>
         </div>
         <form action="">
-          <input type="text" placeholder="seu melhor e-mail!">
+          <input type="text" placeholder="seu melhor e-mail!" />
           <button>enviar</button>
         </form>
       </div>
-    </section>
-  </main>
-</body>
+    </footer>
+    <script>
+      function displayAbout() {
+        var arrow = document.getElementById('animation')
+        arrow.classList.toggle('rotate')
+        var display = document.getElementById('about')
+        display.classList.toggle('active')
+      }
+    </script>
+  </body>
 </html>
